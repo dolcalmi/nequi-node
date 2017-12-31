@@ -23,7 +23,7 @@ o
 
 ## Uso
 
-El paquete debe configurarse con las [credenciales de su cuenta] [api-keys].
+El paquete debe configurarse con las [credenciales de su cuenta][api-keys].
 
 ``` js
 var nequiClient = require('nequi')('Your Access Key', 'Your Secret Key', 'Your API Key');
