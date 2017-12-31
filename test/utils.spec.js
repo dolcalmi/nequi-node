@@ -129,14 +129,14 @@ describe('utils', function() {
       expect(args.length).to.equal(1);
     });
     it('parses an api key', function() {
-      var args = [{apiKey:'sk_test_iiiiiiiiiiiiiiiiiiiiiiii'}];
+      var args = [{apiKey: 'sk_test_iiiiiiiiiiiiiiiiiiiiiiii'}];
       expect(utils.getOptionsFromArgs(args)).to.deep.equal({
         auth: {
           apiKey: 'sk_test_iiiiiiiiiiiiiiiiiiiiiiii'
         },
         channel: null,
         headers: {
-          "x-api-key": "sk_test_iiiiiiiiiiiiiiiiiiiiiiii"
+          'x-api-key': 'sk_test_iiiiiiiiiiiiiiiiiiiiiiii'
         },
         service: null
       });
@@ -166,7 +166,7 @@ describe('utils', function() {
         },
         channel: 'PNP04-C001',
         headers: {
-          "x-api-key": "sk_test_iiiiiiiiiiiiiiiiiiiiiiii"
+          'x-api-key': 'sk_test_iiiiiiiiiiiiiiiiiiiiiiii'
         },
         service: {
           name: 'myService'
@@ -185,7 +185,7 @@ describe('utils', function() {
         },
         channel: 'PNP04-C001',
         headers: {
-          "x-api-key": "sk_test_iiiiiiiiiiiiiiiiiiiiiiii"
+          'x-api-key': 'sk_test_iiiiiiiiiiiiiiiiiiiiiiii'
         },
         service: null
       });
@@ -240,7 +240,7 @@ describe('utils', function() {
   });
 });
 
-/* eslint-disable no-console */
+/* eslint-disable */
 function handleConsoleWarns(doWithShimmedConsoleWarn, onWarn) {
   // Shim `console.warn`
   var _warn = console.warn;
@@ -252,4 +252,4 @@ function handleConsoleWarns(doWithShimmedConsoleWarn, onWarn) {
   // Un-shim `console.warn`
   console.warn = _warn;
 }
-/* eslint-enable no-console */
+/* eslint-enable */
