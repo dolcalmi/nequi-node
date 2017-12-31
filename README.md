@@ -1,6 +1,7 @@
 # Libreria Node.js para el API de Nequi
 
 [![Build Status](https://api.travis-ci.org/dolcalmi/nequi-node.svg?branch=master)](https://travis-ci.org/dolcalmi/nequi-node)
+[![Coverage Status](https://coveralls.io/repos/github/dolcalmi/nequi-node/badge.svg?branch=master)](https://coveralls.io/github/dolcalmi/nequi-node?branch=master)
 
 Proporciona acceso al API de Nequi desde aplicaciones server-side JavaScript.
 
