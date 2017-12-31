@@ -29,7 +29,7 @@ El paquete debe configurarse con las [credenciales de su cuenta][api-keys].
 ``` js
 var nequiClient = require('nequi')('Your Access Key', 'Your Secret Key', 'Your API Key');
 
-var payment = await nequiClient.payments.unregisteredPayment({
+var payment = await nequiClient.pushPayments.create({
   'phoneNumber': '3206657470',
   'code': '1',
   'value': '5000'
@@ -40,7 +40,7 @@ O con versiones anteriores a Node.js v7.9
 ``` js
 var nequiClient = require('nequi')('Your Access Key', 'Your Secret Key', 'Your API Key');
 
-nequiClient.payments.unregisteredPayment(
+nequiClient.pushPayments.create(
   {
     'phoneNumber': '3206657470',
     'code': '1',
