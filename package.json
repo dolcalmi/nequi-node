@@ -4,7 +4,7 @@
   "description": "Nequi API wrapper",
   "bugs:": "https://github.com/dolcalmi/nequi-node/issues",
   "engines": {
-    "node": ">=4"
+    "node": ">=4.8.0"
   },
   "main": "lib/nequi.js",
   "repository": {
