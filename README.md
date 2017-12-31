@@ -1,6 +1,6 @@
 # Libreria Node.js para el API de Nequi
 
-[![Build Status](https://travis-ci.org/nequi/nequi-node.svg?branch=master)](https://travis-ci.org/nequi/nequi-node)
+[![Build Status](https://api.travis-ci.org/dolcalmi/nequi-node.svg?branch=master)](https://travis-ci.org/dolcalmi/nequi-node)
 
 La libreria Node de Nequi proporciona acceso al API Nequi desde
 aplicaciones server-side JavaScript.
