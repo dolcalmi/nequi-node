@@ -1,0 +1,46 @@
+{
+  "name": "nequi",
+  "version": "0.0.1",
+  "description": "Nequi API wrapper",
+  "bugs:": "https://github.com/dolcalmi/nequi-node/issues",
+  "engines": {
+    "node": ">=4"
+  },
+  "main": "lib/nequi.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:dolcalmi/nequi-node.git"
+  },
+  "author": "Juan P Lopez <dolcalmi@gmail.com>",
+  "private": false,
+  "keywords": [
+    "nequi",
+    "sdk",
+    "api"
+  ],
+  "homepage": "https://github.com/dolcalmi/nequi-node",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "coveralls": "^3.0.0",
+    "eslint": "^4.14.0",
+    "eslint-plugin-chai-friendly": "^0.4.1",
+    "mocha": "^4.1.0",
+    "nyc": "^11.4.1"
+  },
+  "dependencies": {
+    "aws4": "^1.6.0",
+    "bluebird": "^3.5.1",
+    "lodash.isplainobject": "^4.0.6",
+    "nanoid": "^1.0.1"
+  },
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf ./.nyc_output ./node_modules/.cache ./coverage",
+    "mocha": "nyc mocha",
+    "test": "npm run lint && npm run mocha",
+    "lint": "eslint .",
+    "report": "nyc -r text -r lcov report",
+    "coveralls": "cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+  }
+}
