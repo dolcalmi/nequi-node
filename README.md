@@ -1,7 +1,13 @@
 # Libreria Node.js para el API de Nequi
 
+
+[![Version](https://img.shields.io/npm/v/nequi.svg)](https://www.npmjs.org/package/nequi)
 [![Build Status](https://api.travis-ci.org/dolcalmi/nequi-node.svg?branch=master)](https://travis-ci.org/dolcalmi/nequi-node)
 [![Coverage Status](https://coveralls.io/repos/github/dolcalmi/nequi-node/badge.svg?branch=master)](https://coveralls.io/github/dolcalmi/nequi-node?branch=master)
+[![Try on RunKit](https://badge.runkitcdn.com/nequi.svg)](https://runkit.com/npm/nequi)
+
+
+
 
 Proporciona acceso al API de Nequi para aplicaciones Node.js
 
