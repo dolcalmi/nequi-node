@@ -1,8 +1,10 @@
 # https://docs.npmjs.com/misc/developers#keeping-files-out-of-your-package
 
 #tests
+test.js
 test
 coverage
+.nyc_output
 
 #build tools
 .travis.yml
