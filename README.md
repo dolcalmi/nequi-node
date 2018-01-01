@@ -113,7 +113,7 @@ Ejecutar un caso de prueba:
 $ npm run mocha -- test/Error.spec.js --grep 'Populates with type'
 ```
 
-<sub><sup>Desarrollo basado en el [API de Stripe](https://github.com/stripe/stripe-node)</sup></sub>
+<sub><sup>Desarrollo basado en la [Libreria Node.js de Stripe](https://github.com/stripe/stripe-node)</sup></sub>
 
 [api-keys]: https://conecta.nequi.com.co/content/consultas?view=apiKey
 [api-pushPayments]: https://docs.conecta.nequi.com.co/#!/Pagos32con32Push/post_services_paymentservice_unregisteredpayment
