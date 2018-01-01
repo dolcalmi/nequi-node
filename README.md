@@ -22,7 +22,7 @@ o
 
 * [Pagos con Notificación][api-pushPayments]
 * [Pagos con QR code][api-qrPayments]
-* [Pagos con subscripción][api-subscription]
+* [Pagos con suscripción][api-subscription]
 
 ## Documentación
 
@@ -112,6 +112,8 @@ Ejecutar un caso de prueba:
 ```bash
 $ npm run mocha -- test/Error.spec.js --grep 'Populates with type'
 ```
+
+<sub><sup>Desarrollo basado en el [API de Stripe](https://github.com/stripe/stripe-node)</sup></sub>
 
 [api-keys]: https://conecta.nequi.com.co/content/consultas?view=apiKey
 [api-pushPayments]: https://docs.conecta.nequi.com.co/#!/Pagos32con32Push/post_services_paymentservice_unregisteredpayment
