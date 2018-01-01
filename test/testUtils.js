@@ -45,7 +45,6 @@ var utils = module.exports = {
         nequiInstance[i]._request = function(method, url, data, apiKey, options, cb) {
           var req = nequiInstance.LAST_REQUEST = {
             method: method,
-            channel: data.channel,
             path: url.replace(nequiInstance._api.basePath, ''),
             data: data,
             headers: options.headers || {}

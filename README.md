@@ -3,14 +3,10 @@
 [![Build Status](https://api.travis-ci.org/dolcalmi/nequi-node.svg?branch=master)](https://travis-ci.org/dolcalmi/nequi-node)
 [![Coverage Status](https://coveralls.io/repos/github/dolcalmi/nequi-node/badge.svg?branch=master)](https://coveralls.io/github/dolcalmi/nequi-node?branch=master)
 
-Proporciona acceso al API de Nequi desde aplicaciones server-side JavaScript.
+Proporciona acceso al API de Nequi para aplicaciones Node.js
 
 Tenga en cuenta que esta libreria es para usar del lado del servidor ya que
 requiere las claves secretas de Nequi. No debe usarse directamente en el browser.
-
-## Documentación
-
-Ver [Nequi API](https://docs.conecta.nequi.com.co/).
 
 ## Instalación
 
@@ -22,6 +18,17 @@ o
 
     yarn add nequi
 
+## Servicios soportados
+
+* [Pagos con Notificación][api-pushPayments]
+* [Pagos con QR code][api-qrPayments]
+* [Pagos con subscripción][api-subscription]
+
+## Documentación
+
+* [Nequi](https://nequi.co).
+* [Nequi API](https://docs.conecta.nequi.com.co/).
+
 ## Uso
 
 El paquete debe configurarse con las [credenciales de su cuenta][api-keys].
@@ -30,9 +37,9 @@ El paquete debe configurarse con las [credenciales de su cuenta][api-keys].
 var nequiClient = require('nequi')('Your Access Key', 'Your Secret Key', 'Your API Key');
 
 var payment = await nequiClient.pushPayments.create({
-  'phoneNumber': '3206657470',
-  'code': '1',
-  'value': '5000'
+  phoneNumber: '3009871234',
+  code: '1',
+  value: '5000'
 });
 ```
 O con versiones anteriores a Node.js v7.9
@@ -42,9 +49,9 @@ var nequiClient = require('nequi')('Your Access Key', 'Your Secret Key', 'Your A
 
 nequiClient.pushPayments.create(
   {
-    'phoneNumber': '3206657470',
-    'code': '1',
-    'value': '5000'
+    phoneNumber: '3009871234',
+    code: '1',
+    value: '5000'
   },
   function(err, response) {
     err; // null si no hay errores
@@ -60,4 +67,53 @@ const nequiClient = nequi('Your Access Key', 'Your Secret Key', 'Your API Key');
 //…
 ```
 
+### Promesas
+
+Cada método devuelve una promesa encadenable que se puede utilizar en lugar de un callback:
+
+``` js
+// Crea y consultar una nueva suscripción:
+nequi.subscriptionPayments.subscribe({
+  phoneNumber: '3009871234',
+  code: '1',
+  name: 'Company/Service name'
+})
+.then(function(subscription) {
+  return nequi.subscriptionPayments.getSubscription({
+    phoneNumber: '3009871234',
+    code: '1',
+    token: subscription.token
+  });
+})
+.then(function(subscription) {
+  // new subscription
+}).catch(function(err) {
+  // Deal with an error
+});
+```
+
+## Desarrollo
+
+Ejecutar pruebas:
+
+```bash
+$ npm install o yarn install
+$ npm test
+```
+
+Ejecutar solo un archivo:
+
+```bash
+$ npm run mocha -- test/Error.spec.js
+```
+
+Ejecutar un caso de prueba:
+
+```bash
+$ npm run mocha -- test/Error.spec.js --grep 'Populates with type'
+```
+
 [api-keys]: https://conecta.nequi.com.co/content/consultas?view=apiKey
+[api-pushPayments]: https://docs.conecta.nequi.com.co/#!/Pagos32con32Push/post_services_paymentservice_unregisteredpayment
+[api-qrPayments]: https://docs.conecta.nequi.com.co/#!/Pagos32QR/post_services_paymentservice_generatecodeqr
+[api-subscription]: https://docs.conecta.nequi.com.co/#!/Pagos/post_services_subscriptionpaymentservice_automaticpayment

@@ -3,29 +3,27 @@
 var nequi = require('../testUtils').getSpyableNequi();
 var expect = require('chai').expect;
 
-describe('PushPayments Resource', function() {
+describe('QrPayments Resource', function() {
 
   describe('create', function() {
     it('Sends the correct request', function() {
-      nequi.pushPayments.create({
+      nequi.qrPayments.create({
         phoneNumber: '3009871234',
-        code: '1',
         value: '100'
       });
 
       expect(nequi.LAST_REQUEST).to.deep.equal({
         method: 'POST',
-        path: '-services-paymentservice-unregisteredpayment',
+        path: '-services-paymentservice-generatecodeqr',
         data: {
-          channel: 'PNP04-C001',
+          channel: 'PQR03-C001',
           service: {
             name: 'PaymentsService',
-            operation: 'unregisteredPayment'
+            operation: 'generateCodeQR'
           },
           body: {
-            unregisteredPaymentRQ: {
+            generateCodeQRRQ: {
               phoneNumber: '3009871234',
-              code: '1',
               value: '100'
             }
           }
@@ -37,7 +35,7 @@ describe('PushPayments Resource', function() {
 
   describe('getStatus', function() {
     it('Sends the correct request', function() {
-      nequi.pushPayments.getStatus({
+      nequi.qrPayments.getStatus({
         codeQR: '350-nequi-node-7286-qAppP9f1z6'
       });
 
@@ -45,7 +43,7 @@ describe('PushPayments Resource', function() {
         method: 'POST',
         path: '-services-paymentservice-getstatuspayment',
         data: {
-          channel: 'PNP04-C001',
+          channel: 'PQR03-C001',
           service: {
             name: 'PaymentsService',
             operation: 'getStatusPayment'
@@ -63,7 +61,7 @@ describe('PushPayments Resource', function() {
 
   describe('reverse', function() {
     it('Sends the correct request', function() {
-      nequi.pushPayments.reverse({
+      nequi.qrPayments.reverse({
         phoneNumber: '3009871234',
         value: '13',
         code: '1',
@@ -75,7 +73,7 @@ describe('PushPayments Resource', function() {
         method: 'POST',
         path: '-services-reverseservices-reversetransaction',
         data: {
-          channel: 'PNP04-C001',
+          channel: 'PQR03-C001',
           service: {
             name: 'ReverseServices',
             operation: 'reverseTransaction'
