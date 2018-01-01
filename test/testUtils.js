@@ -32,7 +32,7 @@ var utils = module.exports = {
     // That is, with mock-requests built in and hookable
 
     var nequi = require('../lib/nequi');
-    var nequiInstance = nequi('fakeAuthToken');
+    var nequiInstance = nequi('fakeAccessKey', 'fakeSecreteKey', 'fakeApiKey');
 
     nequiInstance.REQUESTS = [];
 
@@ -41,15 +41,19 @@ var utils = module.exports = {
         // Override each _request method so we can make the params
         // available to consuming tests (revealing requests made on
         // REQUESTS and LAST_REQUEST):
-        nequiInstance[i]._request = function(method, url, data, auth, options, cb) {
+
+        nequiInstance[i]._request = function(method, url, data, apiKey, options, cb) {
           var req = nequiInstance.LAST_REQUEST = {
             method: method,
-            url: url,
+            channel: data.channel,
+            path: url.replace(nequiInstance._api.basePath, ''),
             data: data,
-            headers: options.headers || {},
+            headers: options.headers || {}
           };
-          if (auth) {
-            req.auth = auth;
+          if (apiKey) {
+            req.auth = {
+              apiKey: apiKey
+            };
           }
           nequiInstance.REQUESTS.push(req);
           cb.call(this, null, {});
