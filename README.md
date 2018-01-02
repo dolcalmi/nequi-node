@@ -122,6 +122,6 @@ $ npm run mocha -- test/Error.spec.js --grep 'Populates with type'
 <sub><sup>Desarrollo basado en la [Libreria Node.js de Stripe](https://github.com/stripe/stripe-node)</sup></sub>
 
 [api-keys]: https://conecta.nequi.com.co/content/consultas?view=apiKey
-[api-pushPayments]: https://docs.conecta.nequi.com.co/#!/Pagos32con32Push/post_services_paymentservice_unregisteredpayment
-[api-qrPayments]: https://docs.conecta.nequi.com.co/#!/Pagos32QR/post_services_paymentservice_generatecodeqr
-[api-subscription]: https://docs.conecta.nequi.com.co/#!/Pagos/post_services_subscriptionpaymentservice_automaticpayment
+[api-pushPayments]: https://docs.conecta.nequi.com.co/?api=unregisteredPayments
+[api-qrPayments]: https://docs.conecta.nequi.com.co/?api=qrPayments
+[api-subscription]: https://docs.conecta.nequi.com.co/?api=subscriptions
