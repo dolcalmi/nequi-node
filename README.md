@@ -4,10 +4,10 @@
 [![Version](https://img.shields.io/npm/v/nequi.svg)](https://www.npmjs.org/package/nequi)
 [![Build Status](https://api.travis-ci.org/dolcalmi/nequi-node.svg?branch=master)](https://travis-ci.org/dolcalmi/nequi-node)
 [![Coverage Status](https://coveralls.io/repos/github/dolcalmi/nequi-node/badge.svg?branch=master)](https://coveralls.io/github/dolcalmi/nequi-node?branch=master)
+[![Dependency](https://img.shields.io/npm/v/nequi.svg)](https://www.npmjs.org/package/nequi)
+[![David](https://img.shields.io/david/dolcalmi/nequi-node.svg)](https://david-dm.org/dolcalmi/nequi-node)
+[![David](https://img.shields.io/david/dev/dolcalmi/nequi-node.svg)](https://david-dm.org/dolcalmi/nequi-node?type=dev)
 [![Try on RunKit](https://badge.runkitcdn.com/nequi.svg)](https://runkit.com/npm/nequi)
-
-
-
 
 Proporciona acceso al API de Nequi para aplicaciones Node.js
 
