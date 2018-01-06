@@ -3,7 +3,7 @@
 
 [![Version](https://img.shields.io/npm/v/nequi.svg)](https://www.npmjs.org/package/nequi)
 [![Build Status](https://api.travis-ci.org/dolcalmi/nequi-node.svg?branch=master)](https://travis-ci.org/dolcalmi/nequi-node)
-[![Coveralls github](https://img.shields.io/coveralls/github/dolcalmi/nequi-node.svg)]()
+[![Coveralls github](https://img.shields.io/coveralls/github/dolcalmi/nequi-node.svg)](https://coveralls.io/github/dolcalmi/nequi-node?branch=master)
 [![David](https://img.shields.io/david/dolcalmi/nequi-node.svg)](https://david-dm.org/dolcalmi/nequi-node)
 [![David](https://img.shields.io/david/dev/dolcalmi/nequi-node.svg)](https://david-dm.org/dolcalmi/nequi-node?type=dev)
 [![Try on RunKit](https://badge.runkitcdn.com/nequi.svg)](https://runkit.com/npm/nequi)
