@@ -1,7 +1,13 @@
 # Libreria Node.js para el API de Nequi
 
+
+[![Version](https://img.shields.io/npm/v/nequi.svg)](https://www.npmjs.org/package/nequi)
 [![Build Status](https://api.travis-ci.org/dolcalmi/nequi-node.svg?branch=master)](https://travis-ci.org/dolcalmi/nequi-node)
 [![Coverage Status](https://coveralls.io/repos/github/dolcalmi/nequi-node/badge.svg?branch=master)](https://coveralls.io/github/dolcalmi/nequi-node?branch=master)
+[![Try on RunKit](https://badge.runkitcdn.com/nequi.svg)](https://runkit.com/npm/nequi)
+
+
+
 
 Proporciona acceso al API de Nequi para aplicaciones Node.js
 
@@ -116,6 +122,6 @@ $ npm run mocha -- test/Error.spec.js --grep 'Populates with type'
 <sub><sup>Desarrollo basado en la [Libreria Node.js de Stripe](https://github.com/stripe/stripe-node)</sup></sub>
 
 [api-keys]: https://conecta.nequi.com.co/content/consultas?view=apiKey
-[api-pushPayments]: https://docs.conecta.nequi.com.co/#!/Pagos32con32Push/post_services_paymentservice_unregisteredpayment
-[api-qrPayments]: https://docs.conecta.nequi.com.co/#!/Pagos32QR/post_services_paymentservice_generatecodeqr
-[api-subscription]: https://docs.conecta.nequi.com.co/#!/Pagos/post_services_subscriptionpaymentservice_automaticpayment
+[api-pushPayments]: https://docs.conecta.nequi.com.co/?api=unregisteredPayments
+[api-qrPayments]: https://docs.conecta.nequi.com.co/?api=qrPayments
+[api-subscription]: https://docs.conecta.nequi.com.co/?api=subscriptions
