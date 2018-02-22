@@ -5,6 +5,7 @@ test.js
 test
 coverage
 .nyc_output
+.github
 
 #build tools
 .travis.yml
