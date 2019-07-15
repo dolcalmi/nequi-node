@@ -20,20 +20,20 @@
   ],
   "homepage": "https://github.com/dolcalmi/nequi-node",
   "devDependencies": {
-    "chai": "^4.1.2",
+    "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
-    "coveralls": "^3.0.0",
-    "eslint": "^4.14.0",
+    "coveralls": "^3.0.5",
+    "eslint": "^6.0.1",
     "eslint-plugin-chai-friendly": "^0.4.1",
-    "mocha": "^5.0.1",
-    "nyc": "^11.4.1"
+    "mocha": "^6.1.4",
+    "nyc": "^14.1.1"
   },
   "dependencies": {
-    "aws4": "^1.6.0",
-    "bluebird": "^3.5.1",
+    "aws4": "^1.8.0",
+    "bluebird": "^3.5.5",
     "lodash.isplainobject": "^4.0.6",
-    "nanoid": "^1.0.1",
-    "safe-buffer": "^5.1.1"
+    "nanoid": "^2.0.3",
+    "safe-buffer": "^5.2.0"
   },
   "license": "MIT",
   "scripts": {
