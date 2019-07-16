@@ -19,10 +19,6 @@ Instalar el paquete con:
 
     npm install nequi --save
 
-o
-
-    yarn add nequi
-
 ## Servicios soportados
 
 * [Pagos con Notificación][api-pushPayments]
@@ -103,7 +99,7 @@ nequi.subscriptionPayments.subscribe({
 Ejecutar pruebas:
 
 ```bash
-$ npm install o yarn install
+$ npm install
 $ npm test
 ```
 
