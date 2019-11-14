@@ -14,6 +14,13 @@ describe('NequiResource', function() {
     });
   });
 
+  describe('setHost', function() {
+    it('sets host only to resource', function() {
+      nequi.dispersionPayments.setHost('localhost');
+      expect(nequi.dispersionPayments.overrideHost).to.equal('localhost');
+    });
+  });
+
   describe('_defaultHeaders', function() {
     it('sets the api key header using the global API key', function() {
       var headers = nequi.pushPayments._defaultHeaders(null, 0, null);
