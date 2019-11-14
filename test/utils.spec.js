@@ -238,6 +238,21 @@ describe('utils', function() {
       expect(function() { utils.removeEmpty('potato'); }).to.throw();
     });
   });
+
+  describe('randomInt', function() {
+
+    it('returns a random number', function() {
+      expect(utils.randomInt(1, 5)).to.be.a('number');
+      expect(utils.randomInt(1000000000000000)).to.be.a('number');
+    });
+
+    it('throws an error if not valid range', function() {
+      expect(function() { utils.randomInt(); }).to.throw();
+      expect(function() { utils.randomInt(null); }).to.throw();
+      expect(function() { utils.randomInt('no number'); }).to.throw();
+    });
+
+  });
 });
 
 /* eslint-disable */
