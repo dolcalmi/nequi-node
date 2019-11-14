@@ -2,6 +2,7 @@
 
 var nequi = require('../testUtils').getSpyableNequi();
 var expect = require('chai').expect;
+var DEFAULT_PATH = 'payments/v1/';
 
 describe('PushPayments Resource', function() {
 
@@ -15,7 +16,7 @@ describe('PushPayments Resource', function() {
 
       expect(nequi.LAST_REQUEST).to.deep.equal({
         method: 'POST',
-        path: '-services-paymentservice-unregisteredpayment',
+        path: DEFAULT_PATH + '-services-paymentservice-unregisteredpayment',
         data: {
           channel: 'PNP04-C001',
           service: {
@@ -43,7 +44,7 @@ describe('PushPayments Resource', function() {
 
       expect(nequi.LAST_REQUEST).to.deep.equal({
         method: 'POST',
-        path: '-services-paymentservice-getstatuspayment',
+        path: DEFAULT_PATH + '-services-paymentservice-getstatuspayment',
         data: {
           channel: 'PNP04-C001',
           service: {
@@ -73,7 +74,7 @@ describe('PushPayments Resource', function() {
 
       expect(nequi.LAST_REQUEST).to.deep.equal({
         method: 'POST',
-        path: '-services-reverseservices-reversetransaction',
+        path: DEFAULT_PATH + '-services-reverseservices-reversetransaction',
         data: {
           channel: 'PNP04-C001',
           service: {

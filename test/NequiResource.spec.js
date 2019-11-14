@@ -10,7 +10,7 @@ describe('NequiResource', function() {
     it('Generates a path', function() {
       nequi.pushPayments.create({});
       var path = nequi.pushPayments.createResourcePathWithSymbols('{id}');
-      expect(path).to.equal('/{id}');
+      expect(path).to.equal('/payments/v1/{id}');
     });
   });
 

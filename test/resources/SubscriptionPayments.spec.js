@@ -2,6 +2,7 @@
 
 var nequi = require('../testUtils').getSpyableNequi();
 var expect = require('chai').expect;
+var DEFAULT_PATH = 'subscriptions/v1/';
 
 describe('SubscriptionPayments Resource', function() {
 
@@ -15,7 +16,7 @@ describe('SubscriptionPayments Resource', function() {
 
       expect(nequi.LAST_REQUEST).to.deep.equal({
         method: 'POST',
-        path: '-services-subscriptionpaymentservice-newsubscription',
+        path: DEFAULT_PATH + '-services-subscriptionpaymentservice-newsubscription',
         data: {
           channel: 'PDA05-C001',
           service: {
@@ -45,7 +46,7 @@ describe('SubscriptionPayments Resource', function() {
 
       expect(nequi.LAST_REQUEST).to.deep.equal({
         method: 'POST',
-        path: '-services-subscriptionpaymentservice-getsubscription',
+        path: DEFAULT_PATH + '-services-subscriptionpaymentservice-getsubscription',
         data: {
           channel: 'PDA05-C001',
           service: {
@@ -76,7 +77,7 @@ describe('SubscriptionPayments Resource', function() {
 
       expect(nequi.LAST_REQUEST).to.deep.equal({
         method: 'POST',
-        path: '-services-subscriptionpaymentservice-automaticpayment',
+        path: DEFAULT_PATH + '-services-subscriptionpaymentservice-automaticpayment',
         data: {
           channel: 'PDA05-C001',
           service: {
@@ -105,7 +106,7 @@ describe('SubscriptionPayments Resource', function() {
 
       expect(nequi.LAST_REQUEST).to.deep.equal({
         method: 'POST',
-        path: '-services-subscriptionpaymentservice-getstatuspayment',
+        path: DEFAULT_PATH + '-services-subscriptionpaymentservice-getstatuspayment',
         data: {
           channel: 'PDA05-C001',
           service: {
@@ -135,7 +136,7 @@ describe('SubscriptionPayments Resource', function() {
 
       expect(nequi.LAST_REQUEST).to.deep.equal({
         method: 'POST',
-        path: '-services-reverseservices-reversetransaction',
+        path: DEFAULT_PATH + '-services-reverseservices-reversetransaction',
         data: {
           channel: 'PDA05-C001',
           service: {

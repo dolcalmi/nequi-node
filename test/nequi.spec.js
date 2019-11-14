@@ -8,8 +8,8 @@ var nequi = require('../lib/nequi')(
   testUtils.getUserNequiSecretKey()
 );
 
-var DEFAULT_HOST = 'a7zgalw2j0.execute-api.us-east-1.amazonaws.com';
-var DEFAULT_BASE_PATH = '/qa/';
+var DEFAULT_HOST = 'api.sandbox.nequi.com';
+var DEFAULT_BASE_PATH = '/';
 var DEFAULT_SECURITY_TOKEN = '';
 var DEFAULT_CLIENT_ID = 'nequi-node';
 var PAYMENT_DETAILS = {
@@ -31,6 +31,10 @@ describe('Nequi Module', function() {
       nequi.setHost('custom.nequi.co');
       expect(nequi.getApiField('host')).to.equal('custom.nequi.co');
     });
+    it('Should allow me to set host with environment', function() {
+      nequi.setEnvironment('prod');
+      expect(nequi.getApiField('host')).to.equal('api.nequi.com');
+    });
     it('Should allow me to set null or empty, to reset to the default', function() {
       nequi.setHost(null);
       expect(nequi.getApiField('host')).to.equal(DEFAULT_HOST);
@@ -43,20 +47,14 @@ describe('Nequi Module', function() {
     it('Should define a default equal to DEFAULT_BASE_PATH', function() {
       expect(nequi.getApiField('basePath')).to.equal(DEFAULT_BASE_PATH);
     });
-    it('Should allow me to set prod', function() {
-      nequi.setEnvironment('prod');
+    it('Should allow me to set basePath', function() {
+      nequi.setBasePath('/prod/');
       expect(nequi.getApiField('basePath')).to.equal('/prod/');
     });
-    it('Should be DEFAULT_BASE_PATH if base path is not prod', function() {
-      nequi.setEnvironment('qa');
-      expect(nequi.getApiField('basePath')).to.equal(DEFAULT_BASE_PATH);
-      nequi.setEnvironment('staging');
-      expect(nequi.getApiField('basePath')).to.equal(DEFAULT_BASE_PATH);
-    });
     it('Should allow me to set null or empty, to reset to the default', function() {
-      nequi.setEnvironment(null);
+      nequi.setBasePath(null);
       expect(nequi.getApiField('basePath')).to.equal(DEFAULT_BASE_PATH);
-      nequi.setEnvironment('');
+      nequi.setBasePath('');
       expect(nequi.getApiField('basePath')).to.equal(DEFAULT_BASE_PATH);
     });
   });

@@ -2,6 +2,7 @@
 
 var nequi = require('../testUtils').getSpyableNequi();
 var expect = require('chai').expect;
+var DEFAULT_PATH = 'payments/v1/';
 
 describe('QrPayments Resource', function() {
 
@@ -14,7 +15,7 @@ describe('QrPayments Resource', function() {
 
       expect(nequi.LAST_REQUEST).to.deep.equal({
         method: 'POST',
-        path: '-services-paymentservice-generatecodeqr',
+        path: DEFAULT_PATH + '-services-paymentservice-generatecodeqr',
         data: {
           channel: 'PQR03-C001',
           service: {
@@ -41,7 +42,7 @@ describe('QrPayments Resource', function() {
 
       expect(nequi.LAST_REQUEST).to.deep.equal({
         method: 'POST',
-        path: '-services-paymentservice-getstatuspayment',
+        path: DEFAULT_PATH + '-services-paymentservice-getstatuspayment',
         data: {
           channel: 'PQR03-C001',
           service: {
@@ -71,7 +72,7 @@ describe('QrPayments Resource', function() {
 
       expect(nequi.LAST_REQUEST).to.deep.equal({
         method: 'POST',
-        path: '-services-reverseservices-reversetransaction',
+        path: DEFAULT_PATH + '-services-reverseservices-reversetransaction',
         data: {
           channel: 'PQR03-C001',
           service: {
