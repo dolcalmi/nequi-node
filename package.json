@@ -20,20 +20,20 @@
   ],
   "homepage": "https://github.com/dolcalmi/nequi-node",
   "devDependencies": {
-    "chai": "^4.2.0",
+    "chai": "^4.3.6",
     "chai-as-promised": "^7.1.1",
-    "coveralls": "^3.0.7",
-    "eslint": "^6.6.0",
-    "eslint-plugin-chai-friendly": "^0.5.0",
-    "mocha": "^6.2.2",
-    "nyc": "^14.1.1"
+    "coveralls": "^3.1.1",
+    "eslint": "^8.9.0",
+    "eslint-plugin-chai-friendly": "^0.7.2",
+    "mocha": "^9.2.0",
+    "nyc": "^15.1.0"
   },
   "dependencies": {
-    "aws4": "^1.8.0",
-    "bluebird": "^3.7.1",
+    "aws4": "^1.11.0",
+    "bluebird": "^3.7.2",
     "lodash.isplainobject": "^4.0.6",
-    "nanoid": "^2.1.6",
-    "safe-buffer": "^5.2.0"
+    "nanoid": "^3.2.0",
+    "safe-buffer": "^5.2.1"
   },
   "license": "MIT",
   "scripts": {
@@ -41,6 +41,7 @@
     "mocha": "nyc mocha",
     "test": "npm run lint && npm run mocha",
     "lint": "eslint .",
+    "lint-fix": "eslint . --fix",
     "report": "nyc -r text -r lcov report",
     "coveralls": "cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   }

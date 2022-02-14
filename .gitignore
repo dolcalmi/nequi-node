@@ -3,4 +3,4 @@ node_modules
 tags
 .nyc_output
 coverage
-test.js
+test*.js
