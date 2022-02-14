@@ -1,6 +1,6 @@
 {
   "name": "nequi",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Nequi API wrapper",
   "bugs:": "https://github.com/dolcalmi/nequi-node/issues",
   "engines": {

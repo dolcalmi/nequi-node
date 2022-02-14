@@ -2,6 +2,7 @@
 
 #tests
 test.js
+test*.js
 test
 coverage
 .nyc_output
